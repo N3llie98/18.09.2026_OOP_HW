@@ -14,18 +14,28 @@ Book::Book(int id, string title, string author, int pageCount, int year, double 
 
 void Book::showInfo()
 {
+	cout << "Id: " << ID << "\nTitle: " << title << "\nAuthor: " << AUTHOR << "\nPage count: " << PAGECOUNT
+		<< "\nYear of release: " << YEAR << "\nPrice: " << price << endl << endl;
 }
 
 void Book::changePrice(double newPrice)
 {
+	price = newPrice;
 }
 
 void Book::isModernBook()
 {
+	if (YEAR >= 2015) {
+		cout << "This book is modern\n\n";
+	}
+	else {
+		cout << "This book is not modern\n\n";
+	}
 }
 
 void Book::discount(double percent)
 {
+	price = price - (price * percent / 100);
 }
 
 int Book::getId()
