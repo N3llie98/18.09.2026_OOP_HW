@@ -20,7 +20,12 @@ void Book::showInfo()
 
 void Book::changePrice(double newPrice)
 {
-	price = newPrice;
+	if (newPrice > 0) {
+		price = newPrice;
+	}
+	else {
+		cout << "!!! Invalid new price\n\n";
+	}
 }
 
 void Book::isModernBook()
@@ -35,7 +40,12 @@ void Book::isModernBook()
 
 void Book::discount(double percent)
 {
-	price = price - (price * percent / 100);
+	if (percent > 0) {
+		price = price - (price * percent / 100);
+	}
+	else {
+		cout << "!!! Invalid percentage\n\n";
+	}
 }
 
 int Book::getId()
