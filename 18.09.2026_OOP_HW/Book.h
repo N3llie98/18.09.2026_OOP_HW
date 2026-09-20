@@ -6,7 +6,7 @@ class Book
 {
 	const int ID;
 	string title;
-	const string author;
+	const string AUTHOR;
 	const int PAGECOUNT;
 	const int YEAR;
 	double price;
@@ -29,10 +29,6 @@ public:
 	int getYear();
 	double getPrice();
 	//SETTERS
-	void setId();
-	void setTitle();
-	void setAuthor();
-	void setPageCount();
-	void setYear();
+	void setTitle(string title);
 };
 

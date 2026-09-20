@@ -1,11 +1,15 @@
 #include "Book.h"
 
-Book::Book()
+Book::Book() :ID(0), AUTHOR(" "), PAGECOUNT(0), YEAR(0)
 {
+	title = " ";
+	price = 0;
 }
 
-Book::Book(int id, string title, string author, int pageCount, int year, double price)
+Book::Book(int id, string title, string author, int pageCount, int year, double price) :ID(id), AUTHOR(author), PAGECOUNT(pageCount), YEAR(year)
 {
+	this->title = title;
+	this->price = price;
 }
 
 void Book::showInfo()
@@ -26,50 +30,35 @@ void Book::discount(double percent)
 
 int Book::getId()
 {
-	return 0;
+	return ID;
 }
 
 string Book::getTitle()
 {
-	return string();
+	return title;
 }
 
 string Book::getAuthor()
 {
-	return string();
+	return AUTHOR;
 }
 
 int Book::getPageCount()
 {
-	return 0;
+	return PAGECOUNT;
 }
 
 int Book::getYear()
 {
-	return 0;
+	return YEAR;
 }
 
 double Book::getPrice()
 {
-	return 0.0;
+	return price;
 }
 
-void Book::setId()
+void Book::setTitle(string title)
 {
-}
-
-void Book::setTitle()
-{
-}
-
-void Book::setAuthor()
-{
-}
-
-void Book::setPageCount()
-{
-}
-
-void Book::setYear()
-{
+	this->title = title;
 }
